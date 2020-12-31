@@ -6,10 +6,9 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 const { check, validationResult } = require('express-validator');
 
-// @route GET api/auth
-// @desc Test route
-// @access Public
-
+// @route    GET api/auth
+// @desc     Get user by token
+// @access   Private
 router.get('/', auth, async (req, res) => {
   // Call database
   try {
@@ -24,7 +23,6 @@ router.get('/', auth, async (req, res) => {
 // @route POST api/auth
 // @desc Authenticate user & get token
 // @access Public
-
 router.post(
   '/',
   [
