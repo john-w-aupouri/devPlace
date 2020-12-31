@@ -2,6 +2,14 @@
 
 A social media app built with the MERN Stack.
 
+## Backend: Node, Express, MongoDB
+
+## Users Routes
+
+| Method | Endpoint    | Protected | Usage         | Response             |
+| ------ | ----------- | --------- | ------------- | -------------------- |
+| Post   | /api/users/ | No        | Register User | res.json({ token }); |
+
 ## Auth Routes
 
 | Method | Endpoint  | Protected | Usage                         | Response        |
