@@ -48,8 +48,12 @@ A social media app built with the MERN Stack.
 
 ## Frontend: React
 
-## Component level state
+## Component Level State
 
-register and login components forms.
+register and login forms.
 
 ## Redux
+
+## Middleware
+
+redux-thunk
