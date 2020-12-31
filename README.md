@@ -1,5 +1,5 @@
 # devPlace
-A social media app built with the MERN Stack as a place for developers.
+A social media app built with the MERN Stack.
 
 ## API (Client - Server)
 
