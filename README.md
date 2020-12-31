@@ -45,3 +45,11 @@ A social media app built with the MERN Stack.
 | Delete | /api/profile/education/:edu_id  | Yes       | Delete education from profile   | res.json(profile)                  |
 | Put    | /api/profile/education          | Yes       | Add education to profile        | res.json(profile)                  |
 | Put    | /api/profile/github/:username   | No        | Get user repos from Github      | res.json(JSON.parse(body))         |
+
+## Frontend: React
+
+## Component level state
+
+register and login components forms.
+
+## Redux
