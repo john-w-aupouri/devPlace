@@ -6,9 +6,9 @@ A social media app built with the MERN Stack.
 
 ## Users Routes
 
-| Method | Endpoint    | Protected | Usage         | Response             |
-| ------ | ----------- | --------- | ------------- | -------------------- |
-| Post   | /api/users/ | No        | Register User | res.json({ token }); |
+| Method | Endpoint   | Protected | Usage         | Response             |
+| ------ | ---------- | --------- | ------------- | -------------------- |
+| Post   | /api/users | No        | Register User | res.json({ token }); |
 
 ## Auth Routes
 
