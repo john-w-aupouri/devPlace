@@ -6,7 +6,10 @@ const Landing = () => {
     <section className='landing'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>devPlace.com</h1>
+          <h1 className='x-large'>
+            devPlace
+            <i className='fas fa-code'></i>
+          </h1>
           <p className='lead'>
             Create a developer profile/portfolio, share posts and get help from
             other developers
