@@ -53,7 +53,7 @@ const Register = ({ setAlert }) => {
             onChange={(e) => onChange(e)}
             required
           />
-          <small className='form-text'>
+          <small className='form-text' style={{ color: '#f4f4f4' }}>
             This site uses Gravatar so if you want a profile image, use a
             Gravatar email
           </small>
@@ -81,7 +81,10 @@ const Register = ({ setAlert }) => {
         <input type='submit' className='btn btn-primary' value='Register' />
       </form>
       <p className='my-1'>
-        Already have an account? <Link to='/login'>Login</Link>
+        Already have an account?{' '}
+        <Link to='/login' style={{ color: '#f4f4f4' }}>
+          Login
+        </Link>
       </p>
     </section>
   );

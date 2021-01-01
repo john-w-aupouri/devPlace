@@ -1,26 +1,30 @@
-import React, { Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Navbar from './components/layout/navbar.component';
-import Landing from './components/layout/landing.component';
+
+// Components
+import Navbar from './components/navbar.component';
+import Alert from './components/alert.component';
+
+// Pages
+import Landing from './pages/landing.component';
 import Register from './pages/register.component';
 import Login from './pages/login.component';
-import Alert from './components/layout/alert.component';
 
+// Styles
 import './App.css';
 
 const App = () => {
   return (
-    <Fragment>
+    <div className='app-container'>
       <Navbar />
       <Route exact path='/' component={Landing} />
+      <Alert />
       <section className='container'>
-        <Alert />
         <Switch>
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
         </Switch>
       </section>
-    </Fragment>
+    </div>
   );
 };
 
