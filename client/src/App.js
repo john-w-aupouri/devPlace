@@ -17,8 +17,8 @@ const App = () => {
     <div className='app-container'>
       <Navbar />
       <Route exact path='/' component={Landing} />
-      <Alert />
       <section className='container'>
+        <Alert />
         <Switch>
           <Route exact path='/register' component={Register} />
           <Route exact path='/login' component={Login} />

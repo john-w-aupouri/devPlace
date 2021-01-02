@@ -45,7 +45,7 @@ const Login = () => {
         </div>
         <input type='submit' className='btn btn-primary' value='Login' />
       </form>
-      <p className='my-1 lead'>
+      <p className='my-1'>
         Don't have an account?{' '}
         <Link to='/register' style={{ color: '#f4f4f4' }}>
           Sign Up
