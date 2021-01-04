@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
+import Alert from '../components/alert.component';
 // Actions
 import { setAlert } from '../redux/actions/alert';
+import { register } from '../redux/actions/auth';
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -78,6 +79,7 @@ const Register = ({ setAlert }) => {
             minLength='6'
           />
         </div>
+        <Alert />
         <input type='submit' className='btn btn-primary' value='Register' />
       </form>
       <p className='my-1'>
@@ -92,6 +94,7 @@ const Register = ({ setAlert }) => {
 
 Register.propTypes = {
   setAlert: PropTypes.func.isRequired,
+  register: PropTypes.func.isRequired,
 };
 
-export default connect(null, { setAlert })(Register);
+export default connect(null, { setAlert, register })(Register);
