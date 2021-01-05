@@ -19,11 +19,21 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
-  background: url('./img/Turquoise_flow.jpg') no-repeat center center/cover;
+  /* background: url('./img/Turquoise_flow.jpg') no-repeat center center/cover; */
+  background: #136a8a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #267871,
+    #136a8a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #267871,
+    #136a8a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 html {
-  background: url('./img/Turquoise_flow.jpg') no-repeat center center/cover;
   min-height: 100vh;
 }
 
@@ -40,10 +50,6 @@ img {
   width: 100%;
 }
 
-.app-container {
-  max-height: 100vh;
-}
-
 /* Utilities */
 .container {
   max-width: 1100px;
@@ -53,6 +59,18 @@ img {
   padding: 0 2rem;
   margin-top: 6rem;
   margin-bottom: 3rem;
+
+  background: #136a8a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #267871,
+    #136a8a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #267871,
+    #136a8a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 /* Text Styles*/
