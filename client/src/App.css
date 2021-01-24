@@ -19,7 +19,7 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
-  /* background: url('./img/Turquoise_flow.jpg') no-repeat center center/cover; */
+
   background: #136a8a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -33,9 +33,9 @@ body {
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-html {
+/* html {
   min-height: 100vh;
-}
+} */
 
 a {
   color: var(--primary-color);

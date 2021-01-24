@@ -13,7 +13,7 @@ import Login from './pages/login.component';
 
 import { loadUser } from './redux/actions/auth';
 
-import setAuthToken from './redux/utils/setAuthToken';
+import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
 

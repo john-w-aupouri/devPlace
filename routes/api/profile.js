@@ -3,7 +3,10 @@ const request = require('request');
 const config = require('config');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
-const { response } = require('express');
+
+// bring in normalize to give us a proper url, regardless of what user entered
+const normalize = require('normalize-url');
+const checkObjectId = require('../../middleware/checkObjectId');
 
 // Middleware
 const auth = require('../../middleware/auth');
@@ -93,6 +96,14 @@ router.post(
     if (linkedin) profileFields.social.linkedin = linkedin;
     if (instagram) profileFields.social.instagram = instagram;
 
+    // normalize social fields to ensure valid url
+    for (const [key, value] of Object.entries(socialFields)) {
+      if (value && value.length > 0)
+        socialFields[key] = normalize(value, { forceHttps: true });
+    }
+    // add to profileFields
+    profileFields.social = socialFields;
+
     try {
       let profile = await Profile.findOne({ user: req.user.id });
 
@@ -140,7 +151,7 @@ router.get('/', async (req, res) => {
   @desc Get all profile by user ID
   @access Public
 */
-router.get('/user/:user_id', async (req, res) => {
+router.get('/user/:user_id', checkObjectId('user_id'), async (req, res) => {
   try {
     const profile = await Profile.findOne({
       user: req.params.user_id,
