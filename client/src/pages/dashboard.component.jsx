@@ -19,8 +19,8 @@ Dashboard.propTypes = {
 };
 
 const mapStateToProps = (state) => ({
-  auth: state.authReducer,
-  profile: state.profileReducer,
+  auth: state.auth,
+  profile: state.profile,
 });
 
 export default connect(mapStateToProps, { getCurrentProfile })(Dashboard);

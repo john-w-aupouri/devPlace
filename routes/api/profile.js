@@ -96,14 +96,6 @@ router.post(
     if (linkedin) profileFields.social.linkedin = linkedin;
     if (instagram) profileFields.social.instagram = instagram;
 
-    // normalize social fields to ensure valid url
-    for (const [key, value] of Object.entries(socialFields)) {
-      if (value && value.length > 0)
-        socialFields[key] = normalize(value, { forceHttps: true });
-    }
-    // add to profileFields
-    profileFields.social = socialFields;
-
     try {
       let profile = await Profile.findOne({ user: req.user.id });
 
