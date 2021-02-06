@@ -4,8 +4,8 @@ import { Provider } from 'react-redux';
 import store from './redux/store';
 
 // Components
-import Navbar from './components/navbar.component';
-import Alert from './components/alert.component';
+import Navbar from './components/layout/navbar.component';
+import Alert from './components/layout/alert.component';
 import PrivateRoute from './components/routing/private-route.component';
 
 // Pages
