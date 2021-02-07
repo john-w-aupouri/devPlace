@@ -7,6 +7,7 @@ import store from './redux/store';
 import Navbar from './components/layout/navbar.component';
 import Alert from './components/layout/alert.component';
 import PrivateRoute from './components/routing/private-route.component';
+import CreateProfile from './components/profile-forms/create-profile.component';
 
 // Pages
 import Landing from './pages/landing.component';
@@ -42,6 +43,11 @@ const App = () => {
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} />
             <PrivateRoute exact path='/dashboard' component={Dashboard} />
+            <PrivateRoute
+              exact
+              path='/create-profile'
+              component={CreateProfile}
+            />
           </Switch>
         </section>
       </Router>
