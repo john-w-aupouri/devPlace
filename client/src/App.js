@@ -8,12 +8,13 @@ import Navbar from './components/layout/navbar.component';
 import Alert from './components/layout/alert.component';
 import PrivateRoute from './components/routing/private-route.component';
 import CreateProfile from './components/profile-forms/create-profile.component';
+import EditProfile from './components/profile-forms/edit-profile.component';
+import Dashboard from './components/dashboard/dashboard.component';
 
 // Pages
 import Landing from './pages/landing.component';
 import Register from './pages/register.component';
 import Login from './pages/login.component';
-import Dashboard from './pages/dashboard.component';
 
 // Actions
 import { loadUser } from './redux/actions/auth';
@@ -48,6 +49,7 @@ const App = () => {
               path='/create-profile'
               component={CreateProfile}
             />
+            <PrivateRoute exact path='/edit-profile' component={EditProfile} />
           </Switch>
         </section>
       </Router>
