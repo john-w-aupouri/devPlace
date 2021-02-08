@@ -26,22 +26,6 @@ const EditProfile = ({
     instagram: '',
   });
 
-  // Destructure State
-  const {
-    company,
-    website,
-    location,
-    status,
-    skills,
-    githubusername,
-    bio,
-    twitter,
-    facebook,
-    linkedin,
-    youtube,
-    instagram,
-  } = formData;
-
   useEffect(() => {
     getCurrentProfile();
 
@@ -62,12 +46,28 @@ const EditProfile = ({
     });
   }, [loading]);
 
+  // Destructure State
+  const {
+    company,
+    website,
+    location,
+    status,
+    skills,
+    githubusername,
+    bio,
+    twitter,
+    facebook,
+    linkedin,
+    youtube,
+    instagram,
+  } = formData;
+
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = (e) => {
     e.preventDefault();
-    createProfile(formData, history);
+    createProfile(formData, history, true);
   };
 
   return (
