@@ -1,23 +1,23 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { deleteEducation } from '../../actions/profile';
-import formatDate from '../../utils/formatDate';
+import Moment from 'react-moment';
 
-const Education = ({ education, deleteEducation }) => {
+const Education = ({ education }) => {
   const educations = education.map((edu) => (
     <tr key={edu._id}>
       <td>{edu.school}</td>
       <td className='hide-sm'>{edu.degree}</td>
       <td>
-        {formatDate(edu.from)} - {edu.to ? formatDate(edu.to) : 'Now'}
+        <Moment format='YYYY/MM/DD'>{edu.from}</Moment> -{' '}
+        {edu.to === null ? (
+          'Now'
+        ) : (
+          <Moment format='YYYY/MM/DD'>{edu.from}</Moment>
+        )}
       </td>
       <td>
-        <button
-          onClick={() => deleteEducation(edu._id)}
-          className='btn btn-danger'>
-          Delete
-        </button>
+        <button className='btn btn-danger'>Delete</button>
       </td>
     </tr>
   ));
@@ -42,7 +42,7 @@ const Education = ({ education, deleteEducation }) => {
 
 Education.propTypes = {
   education: PropTypes.array.isRequired,
-  deleteEducation: PropTypes.func.isRequired,
+  // deleteEducation: PropTypes.func.isRequired,
 };
 
-export default connect(null, { deleteEducation })(Education);
+export default connect(null)(Education);
