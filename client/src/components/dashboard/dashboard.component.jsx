@@ -14,37 +14,37 @@ import { getCurrentProfile, deleteAccount } from '../../redux/actions/profile';
 
 const Dashboard = ({
   getCurrentProfile,
+  deleteAccount,
   auth: { user },
-  profile: { profile, loading },
+  profile: { profile },
 }) => {
   useEffect(() => {
     getCurrentProfile();
-  }, []);
+  }, [getCurrentProfile]);
 
-  return loading && profile === null ? (
-    <Spinner />
-  ) : (
+  return (
     <Fragment>
       <h1 className='large text-primary'>Dashboard</h1>
       <p className='lead'>
-        <i className='fas fa-user'></i> Welcome {user && user.name}
+        <i className='fas fa-user' /> Welcome {user && user.name}
       </p>
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
           <Experience experience={profile.experience} />
           <Education education={profile.education} />
+
           <div className='my-2'>
             <button className='btn btn-danger' onClick={() => deleteAccount()}>
-              <i className='fas fa-user-minus'></i> Delete my account
+              <i className='fas fa-user-minus' /> Delete My Account
             </button>
           </div>
         </Fragment>
       ) : (
         <Fragment>
-          <p>You have not setup a profile, please add some info</p>{' '}
+          <p>You have not yet setup a profile, please add some info</p>
           <Link to='/create-profile' className='btn btn-primary my-1'>
-            Add profile
+            Create Profile
           </Link>
         </Fragment>
       )}
