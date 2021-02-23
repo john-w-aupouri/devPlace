@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 
 import Spinner from '../layout/spinner.component';
 import ProfileTop from './profile-top.component';
-import ProfileAbout from './profile-top.component';
-import ProfileExperience from './profile-top.component';
-import ProfileEducation from './profile-top.component';
-import ProfileGithub from './profile-top.component';
+import ProfileAbout from './profile-about.component';
+import ProfileExperience from './profile-experience.component';
+import ProfileEducation from './profile-education.component';
+import ProfileGithub from './profile-github.component';
 
 import { getProfileById } from '../../redux/actions/profile';
 
@@ -35,6 +35,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
             )}
           <div className='profile-grid my-1'>
             <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
           </div>
         </Fragment>
       )}
