@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 // Components
-import Spinner from '../layout/spinner.component';
 import DashboardActions from '../../components/dashboard/dashboard-actions.component';
 import Experience from './experience.component';
 import Education from './education.component';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { addEducation } from '../../redux/actions/profile';
@@ -109,9 +109,9 @@ const AddEducation = ({ addEducation, history }) => {
             />
           </div>
           <input type='submit' className='btn btn-primary my-1' />
-          <Link className='btn btn-light my-1' to='/dashboard'>
+          <a className='btn btn-light my-1' href='/dashboard'>
             Go Back
-          </Link>
+          </a>
         </form>
       </div>
     </section>
@@ -122,4 +122,4 @@ AddEducation.propTypes = {
   addEducation: PropTypes.func.isRequired,
 };
 
-export default connect(null, { addEducation })(AddEducation);
+export default connect(null, { addEducation })(withRouter(AddEducation));
