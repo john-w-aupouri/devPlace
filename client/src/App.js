@@ -14,6 +14,7 @@ import AddExperience from './components/profile-forms/add-experience.component';
 import Dashboard from './components/dashboard/dashboard.component';
 import Profiles from './components/profiles/profiles.component';
 import Profile from './components/profile/profile.component';
+import Posts from './components/posts/posts.component';
 
 // Pages
 import Landing from './pages/landing.component';
@@ -66,6 +67,7 @@ const App = () => {
               path='/add-experience'
               component={AddExperience}
             />
+            <PrivateRoute exact path='/posts' component={Posts} />
           </Switch>
         </section>
       </Router>
