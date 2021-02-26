@@ -46,7 +46,10 @@ const PostItem = ({
           </Link>
           {/* Make sure user posting is logged in */}
           {!auth.loading && user === auth.user._id && (
-            <button className='btn btn-danger' type='button'>
+            <button
+              className='btn btn-danger'
+              type='button'
+              onClick={(e) => deletePost(_id)}>
               <i className='fas fa-times'></i>
             </button>
           )}
