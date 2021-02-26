@@ -28,6 +28,7 @@ function postReducer(state = initialState, action) {
         loading: false
       };
     case GET_POST:
+      // return specific post from api into state
       return {
         ...state,
         post: payload,
@@ -72,6 +73,7 @@ function postReducer(state = initialState, action) {
         ...state,
         post: {
           ...state.post,
+          // filter out all comments not selected to be returned to state
           comments: state.post.comments.filter(
             (comment) => comment._id !== payload
           )

@@ -10,9 +10,14 @@ import { getPost } from '../../redux/actions/post';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffect(() => {
+    // fire action passing url params via the match prop
     getPost(match.params.id);
   }, [getPost, match.params.id]);
 
+  /* 
+    # make sure post has loaded,
+    # if loading is true or if there are no posts in state
+  */
   return loading || post === null ? (
     <Spinner />
   ) : (
