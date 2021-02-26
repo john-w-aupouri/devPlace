@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Spinner from '../layout/spinner.component';
-import PostItem from './post-item.component';
-import PostForm from './post-form.component';
+import PostItem from './posts-item.component';
+import PostForm from './posts-form.component';
 
 import { getPosts } from '../../redux/actions/post';
 

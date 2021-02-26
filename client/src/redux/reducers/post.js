@@ -21,7 +21,7 @@ function postReducer(state = initialState, action) {
 
   switch (type) {
     case GET_POSTS:
-      // return all posts in db
+      // return all posts from api into state
       return {
         ...state,
         posts: payload,

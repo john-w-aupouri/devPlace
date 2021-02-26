@@ -40,7 +40,7 @@ const PostItem = ({
             onClick={(e) => removeLike(_id)}>
             <i className='fas fa-thumbs-down'></i>
           </button>
-          <Link to={`/posts/${_id}`} className='btn btn-primary'>
+          <Link to={`/post/${_id}`} className='btn btn-primary'>
             Discussion
             <span className='comment-count'>{comments.length}</span>
           </Link>
