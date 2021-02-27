@@ -42,7 +42,7 @@ function postReducer(state = initialState, action) {
         loading: false
       };
     case DELETE_POST:
-      // return all post except the one calling this
+      // return all post except the one triggering this action
       return {
         ...state,
         posts: state.posts.filter((post) => post._id !== payload),
