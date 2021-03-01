@@ -13,7 +13,7 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   }, [getProfiles]);
 
   return (
-    <Fragment>
+    <section className='container'>
       {loading ? (
         <Spinner />
       ) : (
@@ -34,17 +34,17 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </div>
         </Fragment>
       )}
-    </Fragment>
+    </section>
   );
 };
 
 Profiles.propTypes = {
   getProfiles: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  profile: state.profile,
+  profile: state.profile
 });
 
 export default connect(mapStateToProps, { getProfiles })(Profiles);
