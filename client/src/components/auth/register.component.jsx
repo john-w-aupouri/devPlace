@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-// Actions
 import { setAlert } from '../../redux/actions/alert';
 import { register } from '../../redux/actions/auth';
 
