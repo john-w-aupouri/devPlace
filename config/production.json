@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://john123:john123@devplace.g8fi4.mongodb.net/<dbname>?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "f6425eca1d72dcec8008",
+  "githubSecret": "e9a266f0a6361b17fb3c00e2d2466da3e736f6f1"
+}

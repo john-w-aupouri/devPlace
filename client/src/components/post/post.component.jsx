@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Spinner from '../layout/spinner.component';

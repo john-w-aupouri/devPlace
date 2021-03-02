@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import { Fragment } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
 import { deleteEducation } from '../../redux/actions/profile';

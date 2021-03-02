@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from 'react';
-import { Link, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Fragment, useState } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { Link, withRouter } from 'react-router-dom';
+
 import { createProfile } from '../../redux/actions/profile';
 
 const CreateProfile = ({ createProfile, history }) => {
@@ -18,7 +19,7 @@ const CreateProfile = ({ createProfile, history }) => {
     facebook: '',
     linkedin: '',
     youtube: '',
-    instagram: '',
+    instagram: ''
   });
 
   // Destructure State
@@ -34,7 +35,7 @@ const CreateProfile = ({ createProfile, history }) => {
     facebook,
     linkedin,
     youtube,
-    instagram,
+    instagram
   } = formData;
 
   const onChange = (e) =>
@@ -221,7 +222,7 @@ const CreateProfile = ({ createProfile, history }) => {
 };
 
 CreateProfile.propTypes = {
-  createProfile: PropTypes.func.isRequired,
+  createProfile: PropTypes.func.isRequired
 };
 
 export default connect(null, { createProfile })(withRouter(CreateProfile));

@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+import { Fragment } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 
 // Actions
@@ -49,7 +49,7 @@ const Experience = ({ experience, deleteExperience }) => {
 
 Experience.propTypes = {
   experience: PropTypes.array.isRequired,
-  deleteExperience: PropTypes.func.isRequired,
+  deleteExperience: PropTypes.func.isRequired
 };
 
 export default connect(null, { deleteExperience })(Experience);
