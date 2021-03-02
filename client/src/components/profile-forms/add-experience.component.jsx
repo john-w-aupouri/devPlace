@@ -22,6 +22,7 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <section className='addExperienceContainer'>
+      <br />
       <div style={{ padding: '7px' }}>
         <h1 className='large text-primary'>Add An Experience</h1>
         <p className='lead'>

@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
@@ -16,7 +16,8 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
   return loading ? (
     <Spinner />
   ) : (
-    <Fragment>
+    <section className='container'>
+      <br />
       <h1 className='large text-primary'>Posts</h1>
       <p className='lead'>
         <i className='fas fa-user'></i> Welcome to the community
@@ -27,7 +28,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
           <PostItem key={post._id} post={post} />
         ))}
       </div>
-    </Fragment>
+    </section>
   );
 };
 

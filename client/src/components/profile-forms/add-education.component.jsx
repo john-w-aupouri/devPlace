@@ -30,6 +30,7 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <section className='addEducationContainer'>
+      <br />
       <div style={{ padding: '7px' }}>
         <h1 className='large text-primary'>Add Your Education</h1>
         <p className='lead'>

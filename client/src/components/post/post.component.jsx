@@ -20,7 +20,8 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   return loading || post === null ? (
     <Spinner />
   ) : (
-    <section className='postContainer'>
+    <section className='container'>
+      <br />
       <Link to='/posts' className='btn'>
         Back To Posts
       </Link>
