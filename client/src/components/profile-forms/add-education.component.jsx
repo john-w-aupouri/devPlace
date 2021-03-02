@@ -12,7 +12,7 @@ const AddEducation = ({ addEducation, history }) => {
     from: '',
     to: '',
     current: false,
-    description: '',
+    description: ''
   });
 
   const {
@@ -22,14 +22,14 @@ const AddEducation = ({ addEducation, history }) => {
     from,
     to,
     description,
-    current,
+    current
   } = formData;
 
   const onChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
-    <section style={{ backgroundColor: 'white' }}>
+    <section className='addEducationContainer'>
       <div style={{ padding: '7px' }}>
         <h1 className='large text-primary'>Add Your Education</h1>
         <p className='lead'>
@@ -119,7 +119,7 @@ const AddEducation = ({ addEducation, history }) => {
 };
 
 AddEducation.propTypes = {
-  addEducation: PropTypes.func.isRequired,
+  addEducation: PropTypes.func.isRequired
 };
 
 export default connect(null, { addEducation })(withRouter(AddEducation));

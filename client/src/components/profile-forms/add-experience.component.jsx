@@ -12,7 +12,7 @@ const AddExperience = ({ addExperience, history }) => {
     from: '',
     to: '',
     current: false,
-    description: '',
+    description: ''
   });
 
   const { company, title, location, from, to, current, description } = formData;
@@ -21,7 +21,7 @@ const AddExperience = ({ addExperience, history }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
-    <section style={{ backgroundColor: 'white' }}>
+    <section className='addExperienceContainer'>
       <div style={{ padding: '7px' }}>
         <h1 className='large text-primary'>Add An Experience</h1>
         <p className='lead'>
@@ -113,7 +113,7 @@ const AddExperience = ({ addExperience, history }) => {
 };
 
 AddExperience.propTypes = {
-  addExperience: PropTypes.func.isRequired,
+  addExperience: PropTypes.func.isRequired
 };
 
 export default connect(null, { addExperience })(withRouter(AddExperience));

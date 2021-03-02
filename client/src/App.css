@@ -95,7 +95,7 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-bottom: 3rem;
+  margin-top: 6rem;
 
   background: #136a8a; /* fallback for old browsers */
   background: -webkit-linear-gradient(
@@ -108,6 +108,66 @@ img {
     #267871,
     #136a8a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.addEducationContainer {
+  max-width: 1100px;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  background-color: white;
+}
+
+.addExperienceContainer {
+  max-width: 1100px;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  background-color: white;
+}
+
+.postContainer {
+  max-width: 1100px;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  background-color: white;
+}
+
+.profilesContainer {
+  max-width: 1100px;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+
+.profileContainer {
+  max-width: 1100px;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+}
+
+.editProfileContainer {
+  max-width: 1100px;
+  min-height: 100%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  background-color: white;
 }
 
 /* Text Styles*/
@@ -358,6 +418,7 @@ button {
 .table td {
   padding: 1rem;
   text-align: left;
+  background: var(--light-color);
 }
 
 .table th {
@@ -558,6 +619,10 @@ button {
 @media (max-width: 700px) {
   .container {
     margin-top: 6rem;
+  }
+
+  .profileContainer {
+    margin-top: 8rem;
   }
 
   .hide-sm {

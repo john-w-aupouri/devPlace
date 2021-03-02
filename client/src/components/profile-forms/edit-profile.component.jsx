@@ -8,7 +8,7 @@ const EditProfile = ({
   profile: { profile, loading },
   createProfile,
   getCurrentProfile,
-  history,
+  history
 }) => {
   const [displaySocialInputs, setDisplaySocialInputs] = useState(false);
   const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ const EditProfile = ({
     facebook: '',
     linkedin: '',
     youtube: '',
-    instagram: '',
+    instagram: ''
   });
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const EditProfile = ({
       facebook: loading || !profile.social ? '' : profile.social.facebook,
       linkedin: loading || !profile.social ? '' : profile.social.linkedin,
       youtube: loading || !profile.social ? '' : profile.social.youtube,
-      instagram: loading || !profile.social ? '' : profile.social.instagram,
+      instagram: loading || !profile.social ? '' : profile.social.instagram
     });
   }, [loading, getCurrentProfile]);
 
@@ -59,7 +59,7 @@ const EditProfile = ({
     facebook,
     linkedin,
     youtube,
-    instagram,
+    instagram
   } = formData;
 
   const onChange = (e) =>
@@ -71,7 +71,7 @@ const EditProfile = ({
   };
 
   return (
-    <section style={{ backgroundColor: 'white' }}>
+    <section className='editProfileContainer'>
       <div style={{ padding: '7px' }}>
         <h1 className='large text-primary'>Edit Profile</h1>
         <p className='lead'>
@@ -247,11 +247,11 @@ const EditProfile = ({
 EditProfile.propTypes = {
   createProfile: PropTypes.func.isRequired,
   getCurrentProfile: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired,
+  profile: PropTypes.object.isRequired
 };
 
 const mapStateToProps = (state) => ({
-  profile: state.profile,
+  profile: state.profile
 });
 
 export default connect(mapStateToProps, { createProfile, getCurrentProfile })(

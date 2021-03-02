@@ -22,7 +22,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
       {profile === null ? (
         <Spinner />
       ) : (
-        <Fragment>
+        <section className='profileContainer'>
           <Link to='/profiles' className='btn btn-light'>
             Back To Profiles
           </Link>
@@ -71,7 +71,7 @@ const Profile = ({ getProfileById, profile: { profile }, auth, match }) => {
               <ProfileGithub username={profile.githubusername} />
             )}
           </div>
-        </Fragment>
+        </section>
       )}
     </Fragment>
   );
